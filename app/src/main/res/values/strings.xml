@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="player1_name">Player 1 name</string>
+    <string name="player2_name">Player 2 name</string>
+    <string name="play">Play</string>
+    <string name="restart">Restart</string>
+    <string name="nextgame">Play again</string>
+    <string name="p1name">John</string>
+    <string name="p2name">Stewart</string>
+    <string name="zero">0</string>
+    <string name="x_o_box">X O Box</string>
+    <string name="info">info</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="ret">Str</string>
+    <string name="ok">OK</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="beginText">To begin you may click play to autopopulate the names, and then click play again to start the game.</string>
+    <string name="congrats">Congratulations</string>
+</resources>
