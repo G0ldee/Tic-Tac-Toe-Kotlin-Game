@@ -34,14 +34,14 @@ class TicTacToeFragment : Fragment() {
     ): View? {
         setFragmentResultListener("requestKey") { requestKey, bundle ->
             val result = bundle.getString("bundleKey")
-            Log.d(TAG, " FRAGMENT LISTENER RESULTS:${result}")
+            //Log.d(TAG, " FRAGMENT LISTENER RESULTS:${result}")
             if (result == "Yes") {
                 gameState.newRound = true
                 if (gameState.lastTurn == player1.name)
                     gameState.lastTurn = player2.name
                 else gameState.lastTurn = player1.name
 
-                Log.d(TAG, " GAMESTATE NEWROUND:${gameState.newRound}")
+                //Log.d(TAG, " GAMESTATE NEWROUND:${gameState.newRound}")
                 gameState.resetCombinations()
                 resetImageBoxes()
             } else if (result == "No") {
@@ -83,7 +83,7 @@ class TicTacToeFragment : Fragment() {
                             actionButton.text = context.getString(R.string.restart)
                             //enableImgBtns(gameState.started)
                             enableImgBtn()
-                            setTestChoices()
+                            //setTestChoices()
                         }
                     } else if (actionButton.text == context.getString(R.string.nextgame) ||
                         actionButton.text == context.getString(R.string.restart)
@@ -147,7 +147,7 @@ class TicTacToeFragment : Fragment() {
             }
         }
         disableImgBtns()
-        //displayInfo(gameState.started)
+        displayInfo(gameState.started, gameState.draw)
     }
 
     private fun setTestChoices() {
@@ -169,6 +169,11 @@ class TicTacToeFragment : Fragment() {
         binding.button8.tag = false
         //binding.button9.setImageResource(R.drawable.cross)
         //binding.button9.tag = true
+        tttGrid.forEach { it ->
+            it.forEach {
+                it.scaleType = ImageView.ScaleType.FIT_CENTER
+            }
+        }
     }
 
     private fun displayInfo(started: Boolean, draw: Boolean) {
